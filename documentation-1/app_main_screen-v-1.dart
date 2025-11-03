@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../constants.dart';
+import '../../constants.dart';
 
 class AppMainScreen extends StatefulWidget {
   const AppMainScreen({Key? key}) : super(key: key);
@@ -115,7 +115,7 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
                 ),
                 SizedBox(height: 20),
                 // Recipes from Firestore
-                Container(
+                Expanded(
                   child: StreamBuilder<QuerySnapshot>(
                     stream: selectedCategory == "All"
                         ? _firestore.collection('recipes').snapshots()
@@ -208,7 +208,6 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
                       }
                     },
                   ),
-                  height: 400,
                 ),
               ],
             ),
@@ -357,8 +356,8 @@ class BannerToExplore extends StatelessWidget {
             top: 0,
             bottom: 0,
             right: -20,
-            child: Image.asset(
-              "assets/images/chef_PNG190.png",
+            child: Image.network(
+              "https://pngimg.com/d/chef_PNG190.png",
               width: 180,
             ),
           ),

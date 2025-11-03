@@ -104,7 +104,7 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
               ),
               // Categories buttons from Firestore
               StreamBuilder<QuerySnapshot>(
-                stream: _firestore.collection('App-Category').snapshots(),
+                stream: _firestore.collection('categories').snapshots(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     List<String> categories = ["All"];
@@ -131,8 +131,8 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
                 height: 400, // Hauteur fixe pour éviter les contraintes infinies
                 child: StreamBuilder<QuerySnapshot>(
                   stream: selectedCategory == "All" 
-                      ? _firestore.collection('Complete-Flutter-App').snapshots()
-                      : _firestore.collection('Complete-Flutter-App')
+                      ? _firestore.collection('details').snapshots()
+                      : _firestore.collection('details')
                           .where('category', isEqualTo: selectedCategory)
                           .snapshots(),
                   builder: (context, snapshot) {
