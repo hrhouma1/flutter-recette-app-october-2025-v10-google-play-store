@@ -240,3 +240,36 @@ Row(
 **Implémentation réalisée de manière pédagogique et simple**  
 *Prête à être testée et étendue*
 
+---
+
+## Note sur l'architecture
+
+### Débat : StreamBuilder Direct vs Firebase Functions
+
+Un débat intéressant a émergé : **Devrait-on utiliser Firebase Functions au lieu de StreamBuilder direct ?**
+
+**Verdict** : Les deux approches sont valides. Le choix dépend du contexte.
+
+**Notre choix (StreamBuilder Direct) est justifié car :**
+1. Contexte d'apprentissage
+2. Projet simple sans logique métier complexe
+3. Besoin de temps réel (natif avec StreamBuilder)
+4. Développement rapide nécessaire
+5. Dataset raisonnable
+
+**Firebase Functions serait préférable pour :**
+1. Application production à grande échelle
+2. Logique métier complexe
+3. Agrégations et statistiques avancées
+4. Intégrations avec services tiers
+5. Validation côté serveur complexe
+
+**Documentation complète** : Voir `documentation-2/05-approche_critique_firebase_functions.md`
+
+Cette documentation de 40 minutes de lecture analyse objectivement les deux approches avec :
+- Tableaux comparatifs détaillés
+- Exemples de code complets
+- Analyse des coûts
+- Recommandations selon le contexte
+- Migration progressive possible
+

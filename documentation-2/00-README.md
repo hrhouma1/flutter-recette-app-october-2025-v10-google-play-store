@@ -77,6 +77,31 @@ Explique comment implémenter la navigation vers une page "View All" qui affiche
 
 ---
 
+### 5. [Analyse Critique : StreamBuilder vs Firebase Functions](05-approche_critique_firebase_functions.md)
+**Niveau** : Avancé / Architecte  
+**Durée de lecture** : ~40 minutes
+
+Analyse approfondie et objective des deux approches architecturales pour Flutter + Firebase.
+
+**Contenu** :
+- Comparaison détaillée des deux approches
+- Tableaux comparatifs (simplicité, coûts, performance, sécurité)
+- Exemples de code complets pour les deux approches
+- Analyse des coûts Firebase
+- Quand utiliser chaque approche
+- Migration progressive (StreamBuilder → Hybride → Functions)
+- Diagrammes d'architecture
+- Verdict pédagogique : qui a raison ?
+- Tableau de décision rapide
+
+**Idéal pour** : 
+- Comprendre les choix architecturaux
+- Débattre des meilleures pratiques
+- Prendre des décisions éclairées pour vos projets
+- Étudiants et professionnels
+
+---
+
 ## 🎯 Par où commencer ?
 
 ### Si vous êtes nouveau sur le projet
@@ -93,6 +118,11 @@ Explique comment implémenter la navigation vers une page "View All" qui affiche
 
 ### Si vous voulez évaluer vos compétences
 - Faites le [Quiz StreamBuilder](03-quiz_streambuilder.md) pour identifier vos points forts et axes d'amélioration
+
+### Si vous vous interrogez sur l'architecture
+- **Décision rapide** : [Guide de décision en 2 minutes](DECISION_RAPIDE.md)
+- **Analyse complète** : [StreamBuilder vs Functions (40 min)](05-approche_critique_firebase_functions.md)
+- Idéal pour les débats en classe ou en équipe
 
 ---
 
