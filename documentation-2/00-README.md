@@ -104,17 +104,18 @@ Analyse approfondie et objective des deux approches architecturales pour Flutter
 
 ### 6. [Études de Cas Pratiques](06-etudes_de_cas_pratiques.md)
 **Niveau** : Intermédiaire à Avancé  
-**Durée** : ~90 minutes (exercice interactif)
+**Durée** : ~90-120 minutes (exercice interactif)
 
-10 études de cas réelles pour pratiquer le choix architectural entre StreamBuilder et Firebase Functions.
+15 études de cas réelles pour pratiquer le choix architectural entre StreamBuilder et Firebase Functions.
 
 **Contenu** :
-- 10 applications réelles décrites en détail
+- 15 applications réelles décrites en détail
 - Grille d'analyse pour chaque cas
 - Réponses en format accordéon (menu déroulant)
 - Justifications complètes avec code
-- Tableau récapitulatif
+- Tableaux récapitulatifs et statistiques
 - Score d'analyse pour chaque critère
+- Diagrammes de visualisation
 
 **Applications couvertes** :
 1. TodoList collaborative (StreamBuilder)
@@ -127,6 +128,11 @@ Analyse approfondie et objective des deux approches architecturales pour Flutter
 8. Plateforme e-learning (Functions)
 9. Météo collaborative (Hybride)
 10. Réservation restaurants (Functions)
+11. App de rencontre (Hybride) ← NOUVEAU
+12. Livraison de nourriture (Hybride) ← NOUVEAU
+13. Covoiturage (Functions) ← NOUVEAU
+14. Streaming musical (Functions) ← NOUVEAU
+15. Gestion d'événements (Functions) ← NOUVEAU
 
 **Idéal pour** :
 - Pratiquer la prise de décision architecturale
@@ -156,13 +162,15 @@ Analyse approfondie et objective des deux approches architecturales pour Flutter
 ### Si vous vous interrogez sur l'architecture
 - **Décision rapide** : [Guide de décision en 2 minutes](DECISION_RAPIDE.md)
 - **Analyse théorique** : [StreamBuilder vs Functions (40 min)](05-approche_critique_firebase_functions.md)
-- **Pratique avec cas réels** : [10 Études de cas (90 min)](06-etudes_de_cas_pratiques.md)
+- **Pratique avec cas réels** : [15 Études de cas (90-120 min)](06-etudes_de_cas_pratiques.md)
+- **Synthèse des cas** : [Référence rapide des 15 cas](SYNTHESE_15_CAS.md)
 - Idéal pour les débats en classe ou en équipe
 
 ### Pour les professeurs et formateurs
 - Utilisez les [Études de cas pratiques](06-etudes_de_cas_pratiques.md) comme exercice en classe
+- Consultez la [Synthèse rapide des 15 cas](SYNTHESE_15_CAS.md) pour référence
 - Format accordéon : les étudiants analysent, puis vérifient leurs réponses
-- 10 applications variées de complexité croissante
+- 15 applications variées de complexité croissante
 - Justifications détaillées avec code d'exemple
 - Parfait pour travaux de groupe et discussions
 

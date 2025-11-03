@@ -474,6 +474,236 @@ Système de réservation de tables dans des restaurants.
 
 ---
 
+## CAS 11 : Application de Rencontre (Dating App)
+
+### Description
+
+Application mobile de rencontre permettant de matcher avec des personnes selon des critères.
+
+**Fonctionnalités** :
+- Profils utilisateurs avec photos et bio
+- Algorithme de matching basé sur localisation et préférences
+- Swipe droite (like) / gauche (pass)
+- Chat en temps réel après match mutuel
+- Notifications push lors de match
+- Abonnement premium (voir qui a liké, filtres avancés)
+- Signalement de profils suspects
+- Limite de swipes quotidiens (free : 50/jour, premium : illimité)
+- Vérification de profil par selfie
+- Boost de visibilité (payant)
+
+**Contraintes** :
+- Budget : Startup avec investisseurs
+- Échelle : 50,000 utilisateurs visés première année
+- Délai : 6 mois pour launch
+- Équipe : 4 développeurs Flutter, 2 backend
+- Modération : Contenu sensible à gérer
+
+**Données** :
+- Profils avec photos (plusieurs par utilisateur)
+- Messages chiffrés
+- Historique de swipes
+- Géolocalisation en temps réel
+- Analytics détaillés (taux de match, engagement)
+
+**Questions à analyser** :
+1. Algorithme de matching : client ou serveur ?
+2. Comment gérer les likes quotidiens ?
+3. Sécurité des données personnelles ?
+4. Modération du contenu ?
+
+### Votre réponse :
+- [ ] StreamBuilder Direct
+- [ ] Firebase Functions
+- [ ] Approche Hybride
+
+---
+
+## CAS 12 : Application de Livraison de Nourriture
+
+### Description
+
+Plateforme de commande et livraison de repas à domicile (style Uber Eats).
+
+**Fonctionnalités** :
+- Parcourir restaurants par localisation
+- Menu avec photos et prix
+- Panier et commande
+- Paiement en ligne
+- Suivi de livraison en temps réel sur carte
+- Système de notation restaurants et livreurs
+- Commission sur chaque commande
+- Gestion des stocks restaurants
+- Attribution automatique de livreur
+- Notifications à chaque étape (préparation, en route, livré)
+- Codes promo et réductions
+
+**Contraintes** :
+- Budget : Entreprise établie avec budget conséquent
+- Échelle : 100 restaurants, 50 livreurs, 10,000 clients
+- Délai : 8 mois
+- Équipe : 8 développeurs, équipe backend dédiée
+- Performance : Attribution livreur doit être instantanée
+
+**Données** :
+- Localisation temps réel des livreurs
+- États de commande (reçue, préparation, en livraison, livrée)
+- Historique complet des commandes
+- Calcul de commissions
+- Optimisation des trajets
+
+**Questions à analyser** :
+1. Suivi temps réel du livreur : comment ?
+2. Attribution automatique du livreur : logique où ?
+3. Gestion des paiements ?
+4. Calcul de distance et temps de livraison ?
+
+### Votre réponse :
+- [ ] StreamBuilder Direct
+- [ ] Firebase Functions
+- [ ] Approche Hybride
+
+---
+
+## CAS 13 : Application de Covoiturage
+
+### Description
+
+Application connectant conducteurs et passagers pour partager des trajets.
+
+**Fonctionnalités** :
+- Publier un trajet (conducteur)
+- Rechercher trajet par itinéraire
+- Réserver une place
+- Paiement sécurisé avec répartition
+- Vérification d'identité obligatoire
+- Système d'avis bidirectionnel
+- Chat entre conducteur et passagers
+- Annulation avec politique de remboursement
+- Géolocalisation du trajet en cours
+- Historique et reçus
+- Vérification permis de conduire et assurance
+
+**Contraintes** :
+- Budget : Startup bootstrap
+- Échelle : 5,000 utilisateurs première année
+- Délai : 5 mois
+- Équipe : 3 développeurs
+- Légal : Conformité transport de personnes
+
+**Données** :
+- Trajets avec points départ/arrivée
+- Réservations avec statut
+- Paiements avec splits complexes
+- Vérifications documents
+- GPS tracking pendant trajet
+
+**Questions à analyser** :
+1. Recherche de trajets : comment optimiser ?
+2. Split de paiement : client ou serveur ?
+3. Vérification documents : où ?
+4. GPS tracking : temps réel critique ?
+
+### Votre réponse :
+- [ ] StreamBuilder Direct
+- [ ] Firebase Functions
+- [ ] Approche Hybride
+
+---
+
+## CAS 14 : Application de Streaming Musical
+
+### Description
+
+Plateforme d'écoute de musique en streaming avec playlists personnalisées.
+
+**Fonctionnalités** :
+- Bibliothèque de millions de chansons
+- Recherche par artiste, album, genre
+- Playlists personnalisées
+- Recommandations basées sur goûts (IA)
+- Mode hors ligne (téléchargement)
+- Partage de playlists
+- Statistiques d'écoute
+- Abonnement mensuel (9.99€)
+- Version gratuite avec publicités
+- Paroles synchronisées
+- Radio personnalisée
+
+**Contraintes** :
+- Budget : Grande entreprise
+- Échelle : 500,000 utilisateurs prévus
+- Délai : 12 mois
+- Équipe : 15 développeurs
+- Performance : Lecture fluide critique
+
+**Données** :
+- Millions de fichiers audio
+- Historique d'écoute par utilisateur
+- Playlists
+- Recommandations IA
+- Analytics d'engagement
+- Gestion des droits d'auteur
+
+**Questions à analyser** :
+1. Recommandations IA : où calculer ?
+2. Gestion du streaming : architecture ?
+3. Mode hors ligne : sync comment ?
+4. Analytics à grande échelle ?
+
+### Votre réponse :
+- [ ] StreamBuilder Direct
+- [ ] Firebase Functions
+- [ ] Approche Hybride
+
+---
+
+## CAS 15 : Application de Gestion d'Événements
+
+### Description
+
+Plateforme pour créer et gérer des événements (concerts, conférences, fêtes).
+
+**Fonctionnalités** :
+- Créer un événement avec détails
+- Vente de billets avec QR code
+- Scan de billets à l'entrée
+- Chat de groupe par événement
+- Notifications rappels
+- Partage sur réseaux sociaux
+- Génération de billets PDF
+- Statistiques pour organisateurs
+- Remboursement en cas d'annulation
+- Carte interactive des événements
+- Système d'invitations
+
+**Contraintes** :
+- Budget : Projet personnel avec ambition commerciale
+- Échelle : 1,000 événements/an visés
+- Délai : 4 mois
+- Équipe : 2 développeurs
+- Fraude : Éviter revente/duplication billets
+
+**Données** :
+- Événements avec places limitées
+- Billets avec codes uniques
+- Transactions de vente
+- Check-in en temps réel
+- Analytics par événement
+
+**Questions à analyser** :
+1. Génération QR codes uniques : où ?
+2. Validation billet à l'entrée : comment ?
+3. Éviter double-scan : logique où ?
+4. Remboursements : automatisés comment ?
+
+### Votre réponse :
+- [ ] StreamBuilder Direct
+- [ ] Firebase Functions
+- [ ] Approche Hybride
+
+---
+
 ---
 
 # RÉPONSES ET JUSTIFICATIONS
@@ -2216,6 +2446,567 @@ exports.aggregateWeatherReports = functions.pubsub
 
 ---
 
+<details>
+<summary><h2>CAS 11 : Application de Rencontre - CLIQUEZ POUR VOIR LA RÉPONSE</h2></summary>
+
+### Réponse : Firebase Functions (avec StreamBuilder pour chat)
+
+### Score d'analyse
+
+| Critère | Évaluation | Impact |
+|---------|------------|--------|
+| Complexité logique | Très élevée | ❌ Functions |
+| Taille dataset | Grand | ❌ Functions |
+| Temps réel | Critique (chat) | ✅ StreamBuilder |
+| Budget | Élevé (startup) | ✅ Functions OK |
+| Échelle | 50k utilisateurs | ❌ Functions |
+| Sécurité | Critique (données personnelles) | ❌ Functions |
+| Agrégations | Complexes (matching) | ❌ Functions |
+| Intégrations | Multiples (verification, paiement) | ❌ Functions |
+
+**Score : Hybride nécessaire**
+
+### Justification détaillée
+
+**Functions OBLIGATOIRES pour :**
+
+1. **Algorithme de matching**
+   ```javascript
+   exports.getMatches = functions.https.onCall(async (data, context) => {
+     const userId = context.auth.uid;
+     
+     // Récupérer profil utilisateur
+     const userProfile = await admin.firestore()
+       .collection('profiles')
+       .doc(userId)
+       .get();
+     
+     const { gender, interestedIn, location, age, preferences } = userProfile.data();
+     
+     // Algorithme de matching complexe
+     const potentialMatches = await admin.firestore()
+       .collection('profiles')
+       .where('gender', '==', interestedIn)
+       .where('interestedIn', '==', gender)
+       .where('geohash', '>=', calculateGeohash(location, preferences.maxDistance))
+       .get();
+     
+     // Filtrer par critères
+     const filtered = potentialMatches.docs.filter(doc => {
+       const profile = doc.data();
+       
+       // Déjà swipé ?
+       if (userProfile.data().swipedProfiles?.includes(doc.id)) return false;
+       
+       // Dans tranche d'âge ?
+       if (profile.age < preferences.minAge || profile.age > preferences.maxAge) return false;
+       
+       // Distance réelle
+       const distance = calculateDistance(location, profile.location);
+       if (distance > preferences.maxDistance) return false;
+       
+       return true;
+     });
+     
+     // Score de compatibilité avec IA
+     const scored = await Promise.all(
+       filtered.map(async (doc) => {
+         const compatibilityScore = await calculateCompatibility(
+           userProfile.data(),
+           doc.data()
+         );
+         
+         return {
+           ...doc.data(),
+           id: doc.id,
+           compatibilityScore
+         };
+       })
+     );
+     
+     // Trier par score
+     return scored.sort((a, b) => b.compatibilityScore - a.compatibilityScore);
+   });
+   ```
+
+2. **Gestion des likes avec limites**
+   ```javascript
+   exports.swipeProfile = functions.https.onCall(async (data, context) => {
+     const { targetUserId, action } = data; // action: 'like' ou 'pass'
+     const userId = context.auth.uid;
+     
+     // Vérifier limite quotidienne
+     const today = new Date().toISOString().split('T')[0];
+     const swipesDoc = await admin.firestore()
+       .collection('daily_swipes')
+       .doc(`${userId}_${today}`)
+       .get();
+     
+     const swipesCount = swipesDoc.exists ? swipesDoc.data().count : 0;
+     
+     // Vérifier si premium
+     const userDoc = await admin.firestore()
+       .collection('users')
+       .doc(userId)
+       .get();
+     
+     const isPremium = userDoc.data().isPremium;
+     
+     if (!isPremium && swipesCount >= 50) {
+       throw new functions.https.HttpsError(
+         'resource-exhausted',
+         'Daily swipe limit reached. Upgrade to premium for unlimited swipes.'
+       );
+     }
+     
+     // Enregistrer swipe
+     await admin.firestore()
+       .collection('swipes')
+       .add({
+         from: userId,
+         to: targetUserId,
+         action,
+         timestamp: admin.firestore.FieldValue.serverTimestamp()
+       });
+     
+     // Incrémenter compteur
+     await admin.firestore()
+       .collection('daily_swipes')
+       .doc(`${userId}_${today}`)
+       .set({
+         count: admin.firestore.FieldValue.increment(1)
+       }, { merge: true });
+     
+     // Si like, vérifier match mutuel
+     if (action === 'like') {
+       const reciprocalLike = await admin.firestore()
+         .collection('swipes')
+         .where('from', '==', targetUserId)
+         .where('to', '==', userId)
+         .where('action', '==', 'like')
+         .get();
+       
+       if (!reciprocalLike.empty) {
+         // MATCH !
+         const matchRef = await admin.firestore()
+           .collection('matches')
+           .add({
+             users: [userId, targetUserId],
+             matchedAt: admin.firestore.FieldValue.serverTimestamp()
+           });
+         
+         // Notifications
+         await Promise.all([
+           sendMatchNotification(userId, targetUserId),
+           sendMatchNotification(targetUserId, userId)
+         ]);
+         
+         return { matched: true, matchId: matchRef.id };
+       }
+     }
+     
+     return { matched: false };
+   });
+   ```
+
+3. **Modération de contenu**
+   ```javascript
+   exports.moderateProfile = functions.firestore
+     .document('profiles/{profileId}')
+     .onCreate(async (snap, context) => {
+       const profile = snap.data();
+       
+       // Analyse des photos avec Vision API
+       const photoAnalysis = await Promise.all(
+         profile.photos.map(url => visionAPI.safeSearch(url))
+       );
+       
+       // Vérifier contenu inapproprié
+       const hasInappropriate = photoAnalysis.some(result => 
+         result.adult === 'VERY_LIKELY' || 
+         result.violence === 'VERY_LIKELY'
+       );
+       
+       if (hasInappropriate) {
+         // Bloquer profil
+         await snap.ref.update({
+           status: 'suspended',
+           moderationReason: 'Inappropriate content detected'
+         });
+         
+         // Notifier utilisateur
+         await sendModerationEmail(profile.userId);
+       }
+       
+       // Analyse de la bio
+       const bioAnalysis = await moderationAPI.analyzeText(profile.bio);
+       
+       if (bioAnalysis.toxicity > 0.7) {
+         await snap.ref.update({
+           bioRequiresReview: true
+         });
+       }
+     });
+   ```
+
+**StreamBuilder pour :**
+
+```dart
+// Chat temps réel après match
+StreamBuilder<QuerySnapshot>(
+  stream: _firestore
+    .collection('matches')
+    .doc(matchId)
+    .collection('messages')
+    .orderBy('timestamp')
+    .snapshots(),
+  builder: (context, snapshot) {
+    // Affichage messages
+  },
+)
+```
+
+### Verdict
+
+**Approche Hybride OBLIGATOIRE** ✅
+
+- Functions pour : matching, likes, modération, paiements premium, vérification
+- StreamBuilder pour : chat temps réel, liste des matches
+
+</details>
+
+---
+
+<details>
+<summary><h2>CAS 12 : Livraison de Nourriture - CLIQUEZ POUR VOIR LA RÉPONSE</h2></summary>
+
+### Réponse : Firebase Functions + StreamBuilder (Hybride)
+
+### Justification
+
+**Functions OBLIGATOIRES pour :**
+
+1. **Attribution automatique de livreur**
+   ```javascript
+   exports.assignDeliveryDriver = functions.https.onCall(async (data, context) => {
+     const { orderId } = data;
+     
+     // Récupérer commande
+     const orderDoc = await admin.firestore()
+       .collection('orders')
+       .doc(orderId)
+       .get();
+     
+     const order = orderDoc.data();
+     
+     // Trouver livreurs disponibles dans la zone
+     const availableDrivers = await admin.firestore()
+       .collection('drivers')
+       .where('status', '==', 'available')
+       .where('geohash', '>=', calculateGeohash(order.restaurantLocation))
+       .get();
+     
+     // Algorithme d'attribution
+     let bestDriver = null;
+     let minScore = Infinity;
+     
+     for (const driverDoc of availableDrivers.docs) {
+       const driver = driverDoc.data();
+       
+       // Calcul score : distance + rating + nombre de commandes en cours
+       const distance = calculateDistance(driver.location, order.restaurantLocation);
+       const score = (
+         distance * 0.6 +
+         (5 - driver.rating) * 0.3 +
+         driver.currentOrders * 0.1
+       );
+       
+       if (score < minScore) {
+         minScore = score;
+         bestDriver = { id: driverDoc.id, ...driver };
+       }
+     }
+     
+     if (!bestDriver) {
+       throw new functions.https.HttpsError('unavailable', 'No drivers available');
+     }
+     
+     // Assigner
+     await admin.firestore().collection('orders').doc(orderId).update({
+       driverId: bestDriver.id,
+       status: 'assigned',
+       assignedAt: admin.firestore.FieldValue.serverTimestamp()
+     });
+     
+     // Notifier livreur
+     await sendDriverNotification(bestDriver.id, orderId);
+     
+     return { driverId: bestDriver.id };
+   });
+   ```
+
+2. **Calcul commission et paiement**
+   ```javascript
+   exports.processOrderPayment = functions.https.onCall(async (data, context) => {
+     const { orderId } = data;
+     
+     const order = await admin.firestore().collection('orders').doc(orderId).get();
+     const orderData = order.data();
+     
+     const subtotal = orderData.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+     const deliveryFee = calculateDeliveryFee(orderData.distance);
+     const total = subtotal + deliveryFee;
+     
+     // Commission : 30% restaurant, 5% livreur
+     const restaurantCommission = subtotal * 0.3;
+     const driverFee = deliveryFee * 0.95;
+     const platformRevenue = restaurantCommission + (deliveryFee - driverFee);
+     
+     // Paiement Stripe
+     const paymentIntent = await stripe.paymentIntents.create({
+       amount: total * 100,
+       currency: 'eur',
+       transfer_group: orderId
+     });
+     
+     // Transferts
+     await stripe.transfers.create({
+       amount: (subtotal - restaurantCommission) * 100,
+       currency: 'eur',
+       destination: orderData.restaurantStripeAccount,
+       transfer_group: orderId
+     });
+     
+     return { clientSecret: paymentIntent.client_secret };
+   });
+   ```
+
+**StreamBuilder pour :**
+
+```dart
+// Suivi livreur en temps réel
+StreamBuilder<DocumentSnapshot>(
+  stream: _firestore
+    .collection('drivers')
+    .doc(driverId)
+    .snapshots(),
+  builder: (context, snapshot) {
+    final location = snapshot.data?['location'];
+    // Afficher sur carte
+  },
+)
+```
+
+### Verdict
+
+**Hybride OBLIGATOIRE** ✅
+
+</details>
+
+---
+
+<details>
+<summary><h2>CAS 13 : Covoiturage - CLIQUEZ POUR VOIR LA RÉPONSE</h2></summary>
+
+### Réponse : Firebase Functions
+
+### Justification
+
+**Functions nécessaires pour :**
+
+1. **Split de paiement complexe**
+2. **Vérification documents d'identité**
+3. **Recherche de trajets optimisée**
+4. **Calcul remboursements selon politique**
+
+```javascript
+exports.splitRidePayment = functions.https.onCall(async (data, context) => {
+  const { rideId } = data;
+  
+  const ride = await admin.firestore().collection('rides').doc(rideId).get();
+  const rideData = ride.data();
+  
+  const pricePerSeat = rideData.pricePerPerson;
+  const passengers = rideData.passengers;
+  
+  // Commission 10%
+  const commission = pricePerSeat * 0.1;
+  const driverAmount = (pricePerSeat - commission) * passengers.length;
+  
+  // Créer charges pour chaque passager
+  await Promise.all(
+    passengers.map(passengerId => 
+      createPassengerCharge(passengerId, pricePerSeat)
+    )
+  );
+  
+  // Transfer au conducteur
+  await stripe.transfers.create({
+    amount: driverAmount * 100,
+    currency: 'eur',
+    destination: rideData.driverStripeAccount
+  });
+});
+```
+
+### Verdict
+
+**Functions nécessaire** ✅
+
+</details>
+
+---
+
+<details>
+<summary><h2>CAS 14 : Streaming Musical - CLIQUEZ POUR VOIR LA RÉPONSE</h2></summary>
+
+### Réponse : Firebase Functions
+
+### Justification
+
+**Functions OBLIGATOIRES pour :**
+
+1. **Recommandations IA**
+   ```javascript
+   exports.generateRecommendations = functions.https.onCall(async (data, context) => {
+     const userId = context.auth.uid;
+     
+     // Historique d'écoute
+     const history = await getUserListeningHistory(userId);
+     
+     // Analyse avec ML
+     const recommendations = await mlModel.recommend({
+       userId,
+       history,
+       genres: extractGenres(history),
+       artists: extractArtists(history)
+     });
+     
+     return recommendations;
+   });
+   ```
+
+2. **Analytics à grande échelle**
+3. **Gestion droits d'auteur**
+4. **Synchronisation mode hors ligne**
+
+Architecture nécessaire : CDN + Functions + Cache
+
+### Verdict
+
+**Functions OBLIGATOIRE** ✅✅✅
+
+</details>
+
+---
+
+<details>
+<summary><h2>CAS 15 : Gestion d'Événements - CLIQUEZ POUR VOIR LA RÉPONSE</h2></summary>
+
+### Réponse : Firebase Functions
+
+### Justification
+
+**Functions OBLIGATOIRES pour :**
+
+1. **Génération billets avec QR uniques**
+   ```javascript
+   exports.generateTicket = functions.https.onCall(async (data, context) => {
+     const { eventId, quantity } = data;
+     const userId = context.auth.uid;
+     
+     // Vérifier places disponibles
+     const event = await admin.firestore().collection('events').doc(eventId).get();
+     
+     if (event.data().availableSeats < quantity) {
+       throw new functions.https.HttpsError('resource-exhausted', 'Not enough seats');
+     }
+     
+     // Transaction atomique
+     return admin.firestore().runTransaction(async (transaction) => {
+       // Générer codes QR uniques
+       const tickets = [];
+       for (let i = 0; i < quantity; i++) {
+         const uniqueCode = generateUniqueCode();
+         
+         const ticketRef = admin.firestore().collection('tickets').doc();
+         transaction.set(ticketRef, {
+           eventId,
+           userId,
+           code: uniqueCode,
+           used: false,
+           purchasedAt: admin.firestore.FieldValue.serverTimestamp()
+         });
+         
+         tickets.push({
+           id: ticketRef.id,
+           code: uniqueCode
+         });
+       }
+       
+       // Décrémenter places
+       const eventRef = admin.firestore().collection('events').doc(eventId);
+       transaction.update(eventRef, {
+         availableSeats: admin.firestore.FieldValue.increment(-quantity)
+       });
+       
+       return tickets;
+     });
+   });
+   ```
+
+2. **Validation à l'entrée (anti-fraude)**
+   ```javascript
+   exports.scanTicket = functions.https.onCall(async (data, context) => {
+     const { ticketCode, eventId } = data;
+     
+     // Vérifier code
+     const ticketQuery = await admin.firestore()
+       .collection('tickets')
+       .where('code', '==', ticketCode)
+       .where('eventId', '==', eventId)
+       .get();
+     
+     if (ticketQuery.empty) {
+       throw new functions.https.HttpsError('not-found', 'Invalid ticket');
+     }
+     
+     const ticketDoc = ticketQuery.docs[0];
+     const ticket = ticketDoc.data();
+     
+     // Déjà utilisé ?
+     if (ticket.used) {
+       throw new functions.https.HttpsError('already-exists', 'Ticket already scanned');
+     }
+     
+     // Marquer comme utilisé (atomique)
+     await ticketDoc.ref.update({
+       used: true,
+       scannedAt: admin.firestore.FieldValue.serverTimestamp(),
+       scannedBy: context.auth.uid
+     });
+     
+     // Log scan
+     await admin.firestore().collection('scan_logs').add({
+       ticketId: ticketDoc.id,
+       eventId,
+       scannedAt: admin.firestore.FieldValue.serverTimestamp()
+     });
+     
+     return { success: true, userId: ticket.userId };
+   });
+   ```
+
+### Verdict
+
+**Functions OBLIGATOIRE** ✅
+
+(Double scan impossible avec logique serveur + transactions atomiques)
+
+</details>
+
+---
+
 ---
 
 # TABLEAU RÉCAPITULATIF
@@ -2232,6 +3023,86 @@ exports.aggregateWeatherReports = functions.pubsub
 | 8. E-learning | Functions ✅ | Certificats, quiz, analytics, paiements |
 | 9. Météo Collaborative | Hybride ✅ | Temps réel + agrégations géo |
 | 10. Réservation Restaurants | Functions ✅ | Gestion conflits, transactions atomiques |
+| 11. App de Rencontre | Hybride ✅ | Matching complexe + chat temps réel |
+| 12. Livraison Nourriture | Hybride ✅ | Attribution livreur + tracking temps réel |
+| 13. Covoiturage | Functions ✅ | Split paiement, vérification, sécurité |
+| 14. Streaming Musical | Functions ✅✅✅ | IA recommandations, millions utilisateurs, CDN |
+| 15. Gestion Événements | Functions ✅ | QR uniques, anti-fraude, transactions atomiques |
+
+---
+
+## Statistiques des réponses
+
+**StreamBuilder Direct** : 3/15 cas (20%)
+- TodoList, App Recettes, Portfolio
+
+**Firebase Functions** : 8/15 cas (53%)
+- Marketplace, Bancaire, Fitness, E-learning, Restaurants, Covoiturage, Streaming, Événements
+
+**Approche Hybride** : 4/15 cas (27%)
+- Réseau Social, Météo, App Rencontre, Livraison
+
+**Conclusion** : Plus l'application est complexe et scale, plus Functions devient nécessaire
+
+---
+
+## Visualisation des cas par complexité
+
+```mermaid
+graph TB
+    subgraph Simple[STREAMBUILDER DIRECT - 20%]
+        A1[TodoList]
+        A2[App Recettes]
+        A3[Portfolio]
+    end
+    
+    subgraph Hybride[APPROCHE HYBRIDE - 27%]
+        B1[Réseau Social]
+        B2[Météo]
+        B3[App Rencontre]
+        B4[Livraison]
+    end
+    
+    subgraph Complexe[FIREBASE FUNCTIONS - 53%]
+        C1[Marketplace]
+        C2[App Bancaire]
+        C3[Fitness]
+        C4[E-learning]
+        C5[Restaurants]
+        C6[Covoiturage]
+        C7[Streaming]
+        C8[Événements]
+    end
+    
+    style Simple fill:#e1ffe1
+    style Hybride fill:#fff4e1
+    style Complexe fill:#ffe1e1
+```
+
+---
+
+## Carte de décision rapide
+
+```mermaid
+graph TD
+    Start[Votre Application] --> Q1{Paiements ?}
+    
+    Q1 -->|Oui| Functions[Functions<br/>obligatoire]
+    Q1 -->|Non| Q2{Dataset > 10k ?}
+    
+    Q2 -->|Oui| Q3{Temps réel<br/>critique ?}
+    Q2 -->|Non| Q4{Logique métier<br/>complexe ?}
+    
+    Q3 -->|Oui| Hybride[Approche<br/>Hybride]
+    Q3 -->|Non| Functions
+    
+    Q4 -->|Oui| Functions
+    Q4 -->|Non| Stream[StreamBuilder<br/>Direct]
+    
+    style Stream fill:#e1ffe1
+    style Functions fill:#ffe1e1
+    style Hybride fill:#fff4e1
+```
 
 ---
 
@@ -2256,5 +3127,5 @@ Créez votre propre étude de cas :
 ---
 
 **Document créé pour entraîner la prise de décision architecturale**  
-*10 cas réels, analyses détaillées, justifications complètes*
+*15 cas réels, analyses détaillées, justifications complètes*
 

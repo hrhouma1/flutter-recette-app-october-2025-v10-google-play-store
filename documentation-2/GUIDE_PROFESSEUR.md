@@ -2,7 +2,7 @@
 
 ## Vue d'ensemble
 
-Ce guide explique comment utiliser les **[Études de cas pratiques](06-etudes_de_cas_pratiques.md)** comme outil pédagogique dans votre cours Flutter/Firebase.
+Ce guide explique comment utiliser les **[Études de cas pratiques](06-etudes_de_cas_pratiques.md)** (15 cas réels) comme outil pédagogique dans votre cours Flutter/Firebase.
 
 ---
 
@@ -180,6 +180,31 @@ Ce guide explique comment utiliser les **[Études de cas pratiques](06-etudes_de
 **Utilisation** : Gestion de conflits
 **Point clé** : Transactions atomiques
 
+### CAS 11 : Application de Rencontre
+**Niveau** : Avancé
+**Utilisation** : Algorithmes complexes + temps réel
+**Point clé** : Hybride pour matching ET chat
+
+### CAS 12 : Livraison de Nourriture
+**Niveau** : Avancé
+**Utilisation** : Logistique en temps réel
+**Point clé** : Attribution automatique + tracking
+
+### CAS 13 : Covoiturage
+**Niveau** : Avancé
+**Utilisation** : Split de paiement complexe
+**Point clé** : Sécurité et vérifications
+
+### CAS 14 : Streaming Musical
+**Niveau** : Expert
+**Utilisation** : IA et très grande échelle
+**Point clé** : Limites absolues du client
+
+### CAS 15 : Gestion d'Événements
+**Niveau** : Avancé
+**Utilisation** : Anti-fraude et billets uniques
+**Point clé** : Transactions atomiques critiques
+
 ---
 
 ## Progression suggérée dans le semestre
@@ -196,8 +221,12 @@ Ce guide explique comment utiliser les **[Études de cas pratiques](06-etudes_de
 
 ### Semaine 9-12 : Firebase Functions (optionnel)
 **Projet** : Ajouter fonctionnalités avancées
-**Étude de cas** : Cas 2, 6, 8, 10
+**Étude de cas** : Cas 2, 6, 8, 10, 11, 12, 13, 14, 15
 **Objectif** : Quand et comment utiliser Functions
+**Focus nouveaux cas** :
+- Cas 11 (Rencontre) : Algorithmes de matching
+- Cas 12 (Livraison) : Attribution automatique
+- Cas 14 (Streaming) : IA et très grande échelle
 
 ### Semaine 13-14 : Évaluation finale
 **Format** : Présentation de projet + Examen études de cas
