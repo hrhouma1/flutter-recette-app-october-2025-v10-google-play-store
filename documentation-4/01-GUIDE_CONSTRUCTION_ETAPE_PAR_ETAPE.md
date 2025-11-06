@@ -2,17 +2,79 @@
 
 ## Comment utiliser ce guide
 
-1. Copiez le bout de code
-2. Collez dans votre fichier
-3. Hot reload
-4. Vérifiez l'interface
-5. Passez au bout suivant
+1. Lisez "OÙ AJOUTER" pour savoir où coller le code
+2. Copiez le bout de code
+3. Collez exactement à l'endroit indiqué
+4. Hot reload
+5. Vérifiez l'interface
+6. Passez au bout suivant
+
+---
+
+## Arborescence des fichiers du projet
+
+```
+flutter_rec_oct_2025_v3/
+├── lib/
+│   ├── main.dart                    ← ÉTAPE 0
+│   ├── constants.dart               (déjà existant)
+│   ├── firebase_options.dart        (déjà existant)
+│   └── Views/
+│       ├── app_main_screen.dart     ← ÉTAPES 1-10 (fichier principal)
+│       └── view_all_items.dart      (déjà créé)
+├── assets/
+│   └── images/
+│       └── chef_PNG190.png          (déjà existant)
+└── pubspec.yaml                     (déjà configuré)
+```
+
+**Fichiers à créer/modifier** :
+- ÉTAPE 0 : Modifier `lib/main.dart`
+- ÉTAPES 1-10 : Créer/Modifier `lib/Views/app_main_screen.dart`
+
+---
+
+## Plan de construction visuel
+
+```
+ÉTAPE 0: main.dart
+    ↓
+ÉTAPE 1: app_main_screen.dart (structure vide)
+    ↓
+ÉTAPE 2: + BottomNavigationBar
+    ↓
+ÉTAPE 3: + MyAppHomeScreen (classe)
+ÉTAPE 4: + Lier MyAppHomeScreen au body
+    ↓
+ÉTAPE 5: + headerParts() méthode
+ÉTAPE 6: + headerParts() dans Column
+    ↓
+ÉTAPE 7: + mySearchBar() méthode
+ÉTAPE 8: + mySearchBar() dans Column
+    ↓
+ÉTAPE 9: + BannerToExplore classe
+ÉTAPE 10: + Banner dans Column
+    ↓
+ÉTAPE 11: + Titre "Categories" dans Column
+    ↓
+ÉTAPE 12: + StreamBuilder categories dans Column
+ÉTAPE 13: + categoryButtons() méthode
+    ↓
+ÉTAPE 14: + import view_all_items
+ÉTAPE 15: + Row "Quick & Easy" dans Column
+    ↓
+ÉTAPE 16: + StreamBuilder recettes dans Column
+    ↓
+    ✅ APP COMPLÈTE
+```
 
 ---
 
 ## ÉTAPE 0 : Setup Firebase
 
-### main.dart
+### OÙ : Fichier `lib/main.dart`
+
+**ACTION** : Remplacer tout le contenu du fichier par ce code
 
 ```dart
 import 'package:flutter/material.dart';
@@ -50,6 +112,10 @@ class MyApp extends StatelessWidget {
 ---
 
 ## ÉTAPE 1 : Structure de base
+
+### OÙ : Créer fichier `lib/Views/app_main_screen.dart`
+
+**ACTION** : Créer un nouveau fichier vide et coller ce code
 
 ### Interface actuelle
 ```
@@ -97,6 +163,10 @@ class _AppMainScreenState extends State<AppMainScreen> {
 
 ## ÉTAPE 2 : Bottom Navigation Bar
 
+### OÙ : Fichier `lib/Views/app_main_screen.dart`
+
+**ACTION** : Dans la classe `_AppMainScreenState`, REMPLACER la méthode `build()` complète
+
 ### Interface actuelle
 ```
 ┌────────────────────┐
@@ -111,7 +181,7 @@ class _AppMainScreenState extends State<AppMainScreen> {
 
 ### Bout de code 2 : Ajouter bottomNavigationBar
 
-**REMPLACER le Scaffold de l'étape 1 par** :
+**REMPLACER** toute la méthode `build()` (lignes 17-23 environ) par :
 
 ```dart
   @override
@@ -161,6 +231,10 @@ class _AppMainScreenState extends State<AppMainScreen> {
 
 ## ÉTAPE 3 : Créer MyAppHomeScreen
 
+### OÙ : Fichier `lib/Views/app_main_screen.dart`
+
+**ACTION** : Aller TOUT EN BAS du fichier (après le `}` de `_AppMainScreenState`)
+
 ### Interface actuelle
 ```
 ┌────────────────────┐
@@ -173,7 +247,7 @@ class _AppMainScreenState extends State<AppMainScreen> {
 └────────────────────┘
 ```
 
-### Bout de code 3 : Ajouter après _AppMainScreenState (en bas du fichier)
+### Bout de code 3 : AJOUTER en bas du fichier (après la classe _AppMainScreenState)
 
 ```dart
 class MyAppHomeScreen extends StatefulWidget {
@@ -210,7 +284,9 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
 
 ### Bout de code 4 : Utiliser MyAppHomeScreen
 
-**DANS _AppMainScreenState, REMPLACER la ligne body par** :
+### OÙ : Dans la classe `_AppMainScreenState`, méthode `build()`
+
+**ACTION** : Chercher la ligne `body: Center(child: Text("Page index: $selectedIndex")),` et REMPLACER par :
 
 ```dart
       body: selectedIndex == 0
@@ -224,6 +300,10 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
 
 ## ÉTAPE 4 : Header avec titre
 
+### OÙ : Classe `_MyAppHomeScreenState`
+
+**ACTION** : AJOUTER cette méthode APRÈS la méthode `build()`, juste avant le `}` final de la classe
+
 ### Interface actuelle
 ```
 ┌────────────────────┐
@@ -236,7 +316,7 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
 └────────────────────┘
 ```
 
-### Bout de code 5 : Méthode headerParts() (ajouter dans _MyAppHomeScreenState)
+### Bout de code 5 : Méthode headerParts()
 
 ```dart
   Padding headerParts() {
@@ -271,7 +351,9 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
 
 ### Bout de code 6 : Utiliser headerParts dans build
 
-**REMPLACER dans Column children** :
+### OÙ : Dans la méthode `build()` de `_MyAppHomeScreenState`
+
+**ACTION** : Chercher la ligne `Text("Hello from HomeScreen"),` dans le Column et REMPLACER par :
 
 ```dart
           child: Column(
@@ -287,6 +369,10 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
 ---
 
 ## ÉTAPE 5 : Barre de recherche
+
+### OÙ : Classe `_MyAppHomeScreenState`
+
+**ACTION** : AJOUTER cette méthode APRÈS `headerParts()`, avant le `}` final de la classe
 
 ### Interface actuelle
 ```
@@ -328,7 +414,9 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
 
 ### Bout de code 8 : Ajouter dans Column
 
-**AJOUTER après headerParts()** :
+### OÙ : Dans `build()` de `_MyAppHomeScreenState`, dans le `Column`
+
+**ACTION** : MODIFIER le `children:` du Column pour ajouter SizedBox et mySearchBar()
 
 ```dart
             children: [
@@ -344,6 +432,10 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
 
 ## ÉTAPE 6 : Banner promotionnel
 
+### OÙ : Fichier `lib/Views/app_main_screen.dart`
+
+**ACTION** : AJOUTER cette classe TOUT EN BAS du fichier (après MyAppHomeScreen)
+
 ### Interface actuelle
 ```
 ┌────────────────────────┐
@@ -358,7 +450,7 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
 └────────────────────────┘
 ```
 
-### Bout de code 9 : Classe BannerToExplore (ajouter en bas du fichier)
+### Bout de code 9 : Classe BannerToExplore
 
 ```dart
 class BannerToExplore extends StatelessWidget {
@@ -429,7 +521,9 @@ class BannerToExplore extends StatelessWidget {
 
 ### Bout de code 10 : Ajouter banner dans Column
 
-**AJOUTER après mySearchBar()** :
+### OÙ : Dans `build()` de `_MyAppHomeScreenState`, dans le `Column`
+
+**ACTION** : AJOUTER après la ligne `mySearchBar(),` dans le children du Column
 
 ```dart
               mySearchBar(),
@@ -443,6 +537,10 @@ class BannerToExplore extends StatelessWidget {
 
 ## ÉTAPE 7 : Titre "Categories"
 
+### OÙ : Dans `build()` de `_MyAppHomeScreenState`, dans le `Column`
+
+**ACTION** : AJOUTER après la ligne `const BannerToExplore(),`
+
 ### Interface actuelle
 ```
 ┌────────────────────────┐
@@ -455,9 +553,7 @@ class BannerToExplore extends StatelessWidget {
 └────────────────────────┘
 ```
 
-### Bout de code 11 : Ajouter titre
-
-**AJOUTER après BannerToExplore** :
+### Bout de code 11 : Ajouter titre Categories
 
 ```dart
               const BannerToExplore(),
@@ -479,6 +575,10 @@ class BannerToExplore extends StatelessWidget {
 
 ## ÉTAPE 8 : StreamBuilder Categories
 
+### OÙ : Dans `build()` de `_MyAppHomeScreenState`, dans le `Column`
+
+**ACTION** : AJOUTER après le Padding du titre "Categories"
+
 ### Interface actuelle
 ```
 ┌────────────────────────┐
@@ -490,8 +590,6 @@ class BannerToExplore extends StatelessWidget {
 ```
 
 ### Bout de code 12 : StreamBuilder pour categories
-
-**AJOUTER après le titre Categories** :
 
 ```dart
               StreamBuilder<QuerySnapshot>(
@@ -514,7 +612,9 @@ class BannerToExplore extends StatelessWidget {
 
 ### Bout de code 13 : Méthode categoryButtons()
 
-**AJOUTER dans _MyAppHomeScreenState** :
+### OÙ : Classe `_MyAppHomeScreenState`
+
+**ACTION** : AJOUTER cette méthode APRÈS `mySearchBar()`, avant le `}` final de la classe
 
 ```dart
   Widget categoryButtons(List<String> categories) {
@@ -572,7 +672,9 @@ class BannerToExplore extends StatelessWidget {
 
 ### Bout de code 14 : Import view_all_items
 
-**AJOUTER en haut avec les autres imports** :
+### OÙ : TOUT EN HAUT du fichier `app_main_screen.dart`
+
+**ACTION** : AJOUTER cette ligne après `import '../constants.dart';`
 
 ```dart
 import 'view_all_items.dart';
@@ -580,7 +682,9 @@ import 'view_all_items.dart';
 
 ### Bout de code 15 : Titre avec bouton
 
-**AJOUTER après StreamBuilder categories** :
+### OÙ : Dans `build()` de `_MyAppHomeScreenState`, dans le `Column`
+
+**ACTION** : AJOUTER après le StreamBuilder des categories (après la ligne avec `),` qui ferme le StreamBuilder)
 
 ```dart
               const SizedBox(height: 20),
@@ -626,6 +730,10 @@ import 'view_all_items.dart';
 
 ## ÉTAPE 10 : StreamBuilder Recettes (FINAL)
 
+### OÙ : Dans `build()` de `_MyAppHomeScreenState`, dans le `Column`
+
+**ACTION** : AJOUTER après la ligne `const SizedBox(height: 15),` (juste après le Row du titre "Quick & Easy")
+
 ### Interface finale
 ```
 ┌────────────────────────────────┐
@@ -655,8 +763,6 @@ import 'view_all_items.dart';
 ```
 
 ### Bout de code 16 : StreamBuilder recettes (LE PLUS IMPORTANT)
-
-**AJOUTER après le SizedBox(height: 15)** :
 
 ```dart
               Container(
@@ -821,26 +927,83 @@ import 'view_all_items.dart';
 ```
 ÉTAPE 0 : main.dart (Firebase)
    ↓
-ÉTAPE 1 : Structure AppMainScreen
+ÉTAPE 1-2 : Structure + Navigation
+   ┌──────────┐
+   │  Page 0  │
+   │          │
+   ├──────────┤
+   │[🏠][♥]..│
+   └──────────┘
    ↓
-ÉTAPE 2 : Bottom Navigation Bar
+ÉTAPES 3-4 : Page d'accueil
+   ┌──────────┐
+   │HomeScreen│
+   ├──────────┤
+   │[🏠][♥]..│
+   └──────────┘
    ↓
-ÉTAPE 3 : MyAppHomeScreen vide
+ÉTAPES 5-6 : Header + Recherche
+   ┌──────────┐
+   │ What...🔔│
+   │🔍 Search │
+   ├──────────┤
+   │[🏠][♥]..│
+   └──────────┘
    ↓
-ÉTAPE 4 : Header (titre + notification)
+ÉTAPES 7-8 : Banner
+   ┌──────────┐
+   │🔍 Search │
+   │[Banner]  │
+   ├──────────┤
+   │[🏠][♥]..│
+   └──────────┘
    ↓
-ÉTAPE 5 : Barre de recherche
+ÉTAPES 9-11 : Categories
+   ┌──────────┐
+   │[Banner]  │
+   │Categories│
+   │[All][...]│
+   ├──────────┤
+   │[🏠][♥]..│
+   └──────────┘
    ↓
-ÉTAPE 6 : Banner promotionnel
+ÉTAPES 12-14 : Recettes
+   ┌──────────┐
+   │[All][...]│
+   │Quick&Easy│
+   │┌──┐ ┌──┐│
+   ││🍕│ │🍔││
+   │└──┘ └──┘│
+   ├──────────┤
+   │[🏠][♥]..│
+   └──────────┘
    ↓
-ÉTAPE 7 : Titre "Categories"
-   ↓
-ÉTAPE 8 : StreamBuilder Categories
-   ↓
-ÉTAPE 9 : Titre "Quick & Easy" + View all
-   ↓
-ÉTAPE 10 : StreamBuilder Recettes (FINAL)
+   ✅ TERMINÉ
 ```
+
+---
+
+## AIDE-MÉMOIRE : Où ajouter quoi ?
+
+| Étape | Fichier | Où exactement | Action |
+|-------|---------|---------------|--------|
+| 0 | main.dart | Tout le fichier | REMPLACER tout |
+| 1 | app_main_screen.dart | Nouveau fichier | CRÉER + coller |
+| 2 | app_main_screen.dart | Méthode build() | REMPLACER build() |
+| 3 | app_main_screen.dart | Fin de fichier | AJOUTER classe |
+| 4 | app_main_screen.dart | Ligne body | REMPLACER body |
+| 5 | app_main_screen.dart | Après build() | AJOUTER méthode |
+| 6 | app_main_screen.dart | Dans Column | MODIFIER children |
+| 7 | app_main_screen.dart | Après headerParts() | AJOUTER méthode |
+| 8 | app_main_screen.dart | Dans Column | AJOUTER dans children |
+| 9 | app_main_screen.dart | Fin de fichier | AJOUTER classe |
+| 10 | app_main_screen.dart | Dans Column | AJOUTER dans children |
+| 11 | app_main_screen.dart | Dans Column | AJOUTER dans children |
+| 12 | app_main_screen.dart | Dans Column | AJOUTER StreamBuilder |
+| 13 | app_main_screen.dart | Après mySearchBar() | AJOUTER méthode |
+| 14 | app_main_screen.dart | Ligne 5 (imports) | AJOUTER import |
+| 15 | app_main_screen.dart | Dans Column | AJOUTER Row |
+| 16 | app_main_screen.dart | Dans Column | AJOUTER Container |
 
 ---
 
@@ -860,28 +1023,79 @@ Votre app doit avoir :
 
 ---
 
-## Structure finale du fichier
+## Structure finale du fichier app_main_screen.dart
 
 ```
-app_main_screen.dart
+app_main_screen.dart (475 lignes environ)
 │
-├─ Imports
-├─ AppMainScreen (StatefulWidget)
+├─ IMPORTS (lignes 1-5)                        ← Bout 1, 14
+│  ├─ package:flutter/material.dart
+│  ├─ package:iconsax/iconsax.dart
+│  ├─ package:cloud_firestore/cloud_firestore.dart
+│  ├─ ../constants.dart
+│  └─ view_all_items.dart
+│
+├─ AppMainScreen (lignes 6-67)                 ← Bouts 1, 2
 │  └─ _AppMainScreenState
-│     ├─ selectedIndex
-│     └─ build() avec Scaffold + BottomNavigationBar
+│     ├─ selectedIndex = 0
+│     └─ build()
+│        └─ Scaffold
+│           ├─ backgroundColor: white
+│           ├─ bottomNavigationBar (4 items)
+│           └─ body (conditionnel)
 │
-├─ MyAppHomeScreen (StatefulWidget)
+├─ MyAppHomeScreen (lignes 69-379)             ← Bouts 3-16
 │  └─ _MyAppHomeScreenState
-│     ├─ selectedCategory
+│     ├─ selectedCategory = "All"
 │     ├─ _firestore
-│     ├─ build() avec SafeArea + Column
-│     ├─ headerParts()
-│     ├─ mySearchBar()
-│     └─ categoryButtons()
+│     ├─ build()                               ← Bout 3, 6, 8, 10, 11, 12, 15, 16
+│     │  └─ SafeArea
+│     │     └─ SingleChildScrollView
+│     │        └─ Padding
+│     │           └─ Column
+│     │              ├─ headerParts()
+│     │              ├─ SizedBox
+│     │              ├─ mySearchBar()
+│     │              ├─ SizedBox
+│     │              ├─ BannerToExplore
+│     │              ├─ Padding ("Categories")
+│     │              ├─ StreamBuilder (categories)
+│     │              ├─ SizedBox
+│     │              ├─ Row ("Quick & Easy" + "View all")
+│     │              ├─ SizedBox
+│     │              └─ Container (StreamBuilder recettes)
+│     ├─ headerParts()                         ← Bout 5
+│     ├─ mySearchBar()                         ← Bout 7
+│     └─ categoryButtons()                     ← Bout 13
 │
-└─ BannerToExplore (StatelessWidget)
+└─ BannerToExplore (lignes 381-443)            ← Bout 9
+   └─ build()
+      └─ Container (vert)
+         └─ Stack
+            ├─ Positioned (texte + bouton)
+            └─ Positioned (image chef)
 ```
+
+### Correspondance Bouts → Lignes
+
+| Bout | Quoi | Où dans le fichier |
+|------|------|-------------------|
+| 1 | Imports + AppMainScreen | Lignes 1-23 |
+| 2 | BottomNavigationBar | Lignes 17-61 (méthode build) |
+| 3 | MyAppHomeScreen vide | Lignes 69-98 |
+| 4 | Lier MyAppHomeScreen | Ligne 62-64 (body) |
+| 5 | headerParts() | Lignes ~287-314 |
+| 6 | Utiliser headerParts | Ligne ~89 (dans Column) |
+| 7 | mySearchBar() | Lignes ~317-342 |
+| 8 | Utiliser mySearchBar | Lignes ~90-92 (dans Column) |
+| 9 | BannerToExplore | Lignes ~381-443 (classe séparée) |
+| 10 | Utiliser Banner | Ligne ~94 (dans Column) |
+| 11 | Titre "Categories" | Lignes ~95-103 (dans Column) |
+| 12 | StreamBuilder categories | Lignes ~106-119 (dans Column) |
+| 13 | categoryButtons() | Lignes ~344-378 |
+| 14 | Import view_all_items | Ligne 5 |
+| 15 | Titre "Quick & Easy" | Lignes ~122-157 (dans Column) |
+| 16 | StreamBuilder recettes | Lignes ~159-278 (dans Column) |
 
 ---
 
