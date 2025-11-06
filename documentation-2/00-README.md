@@ -4,6 +4,12 @@ Bienvenue dans la documentation du projet ! Cette section contient des explicati
 
 ---
 
+## Navigation rapide
+
+**INDEX COMPLET** : Voir [INDEX_COMPLET.md](INDEX_COMPLET.md) pour la vue d'ensemble et navigation détaillée de tous les 13 documents.
+
+---
+
 ## 📚 Documents disponibles
 
 ### 1. [Arbre des Widgets](01-arbre_widgets.md)
@@ -55,6 +61,30 @@ Quiz complet avec 30 questions pour tester vos connaissances sur StreamBuilder e
 - 5 exercices pratiques supplémentaires
 
 **Idéal pour** : Évaluer et valider vos connaissances
+
+---
+
+### 3bis. [Examen StreamBuilder - 20 Questions](EXAMEN_STREAMBUILDER_20Q.md)
+**Niveau** : Débutant à Intermédiaire  
+**Durée** : 45 minutes (examen formel)
+
+Examen officiel avec 20 questions faciles en format QCM pour évaluation en classe.
+
+**Contenu** :
+- 20 questions à choix multiples (1 point chacune)
+- 4 parties : Concepts de base, Gestion des états, Code pratique, Firestore
+- Réponses détaillées en format accordéon
+- Feuille de réponses à remplir
+- Barème de notation détaillé
+- Recommandations selon score
+- Checklist de préparation
+- Simulation d'examen
+
+**Idéal pour** :
+- Évaluation formelle en classe
+- Préparation aux examens
+- Auto-évaluation avant certification
+- Identification des points faibles
 
 ---
 
@@ -157,7 +187,11 @@ Analyse approfondie et objective des deux approches architecturales pour Flutter
 - Consultez [Arbre des Widgets](01-arbre_widgets.md) et utilisez Ctrl+F pour chercher le widget
 
 ### Si vous voulez évaluer vos compétences
-- Faites le [Quiz StreamBuilder](03-quiz_streambuilder.md) pour identifier vos points forts et axes d'amélioration
+- **Entraînement théorique** : [Quiz StreamBuilder (30 questions)](03-quiz_streambuilder.md) pour pratiquer
+- **Examen formel** : [Examen 20 questions (45 min)](EXAMEN_STREAMBUILDER_20Q.md) pour évaluation officielle
+- **Exercice analyse** : [Null Safety - 5 codes à analyser (60 min)](EXERCICE_NULL_SAFETY.md) pour maîtriser `?.`, `!`, `??`, `??=`
+- **Exercice développement** : [Développer 3 apps (90 min)](EXERCICE_PRATIQUE_DEVELOPPER.md) pour coder vous-même avec StreamBuilder
+- Progression : Examen → Quiz → Null Safety → Développement
 
 ### Si vous vous interrogez sur l'architecture
 - **Décision rapide** : [Guide de décision en 2 minutes](DECISION_RAPIDE.md)
