@@ -175,9 +175,10 @@ Analyse approfondie et objective des deux approches architecturales pour Flutter
 ## 🎯 Par où commencer ?
 
 ### Si vous êtes nouveau sur le projet
-1. Commencez par [Arbre des Widgets](01-arbre_widgets.md) pour comprendre la structure globale
-2. Ensuite lisez [StreamBuilder et Firebase](02-explication_streambuilder.md) pour comprendre la logique
-3. Testez vos connaissances avec le [Quiz StreamBuilder](03-quiz_streambuilder.md)
+1. **Construire l'app** : [Guide étape par étape](GUIDE_CONSTRUCTION_ETAPE_PAR_ETAPE.md) - Copier-coller chaque bout
+2. **Comprendre** : [Arbre des Widgets](01-arbre_widgets.md) pour la structure globale
+3. **Approfondir** : [StreamBuilder et Firebase](02-explication_streambuilder.md) pour la logique
+4. **Tester** : [Quiz StreamBuilder](03-quiz_streambuilder.md) pour valider
 
 ### Si vous connaissez Flutter mais pas Firebase
 - Allez directement à [StreamBuilder et Firebase](02-explication_streambuilder.md)

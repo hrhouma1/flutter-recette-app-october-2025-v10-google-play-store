@@ -2,13 +2,13 @@
 
 ## Vue d'ensemble
 
-Cette documentation complète contient **17 fichiers** couvrant tous les aspects de StreamBuilder, Firebase, et architecture Flutter.
+Cette documentation complète contient **18 fichiers** couvrant tous les aspects de StreamBuilder, Firebase, et architecture Flutter.
 
 **Dernière mise à jour** : Novembre 2025
 
 ---
 
-## DOCUMENTATION TECHNIQUE (6 fichiers)
+## DOCUMENTATION TECHNIQUE (7 fichiers)
 
 ### 01. [00-README.md](00-README.md)
 **Point d'entrée principal**
@@ -18,7 +18,21 @@ Cette documentation complète contient **17 fichiers** couvrant tous les aspects
 
 ---
 
-### 02. [01-arbre_widgets.md](01-arbre_widgets.md)
+### 02. [GUIDE_CONSTRUCTION_ETAPE_PAR_ETAPE.md](GUIDE_CONSTRUCTION_ETAPE_PAR_ETAPE.md)
+**Guide de construction copier-coller**
+- 10 étapes pour construire app_main_screen.dart de zéro
+- Bouts de code numérotés (Bout 1, Bout 2, etc.)
+- Interface ASCII à chaque étape
+- Très concis, prêt à copier-coller
+- Ordre exact de construction
+- Checklist finale
+
+**Durée** : 60 minutes (en copiant-collant)  
+**Utilisation** : Construire l'app rapidement étape par étape sans lire beaucoup
+
+---
+
+### 03. [01-arbre_widgets.md](01-arbre_widgets.md)
 **Arbre des widgets de l'application**
 - 12 diagrammes Mermaid détaillés
 - Hiérarchie complète des widgets
@@ -29,7 +43,7 @@ Cette documentation complète contient **17 fichiers** couvrant tous les aspects
 
 ---
 
-### 03. [02-explication_streambuilder.md](02-explication_streambuilder.md)
+### 04. [02-explication_streambuilder.md](02-explication_streambuilder.md)
 **Explication approfondie de StreamBuilder**
 - Concepts de Stream vs requête classique
 - Anatomie d'un StreamBuilder
@@ -300,11 +314,12 @@ Cette documentation complète contient **17 fichiers** couvrant tous les aspects
 ## STATISTIQUES DE LA DOCUMENTATION
 
 ### Volume total
-- **17 fichiers** de documentation
-- **~29,000 lignes** de contenu
+- **18 fichiers** de documentation
+- **~30,000 lignes** de contenu
 - **55+ diagrammes Mermaid**
 - **120+ exemples de code**
 - **73 exercices** d'évaluation (20 examen + 30 quiz + 15 cas + 5 null-safety + 3 développement)
+- **10 étapes** de construction copier-coller
 
 ### Répartition par type
 
@@ -405,6 +420,7 @@ Cette documentation complète contient **17 fichiers** couvrant tous les aspects
 
 | Je veux... | Document | Durée |
 |------------|----------|-------|
+| Construire l'app étape par étape | GUIDE_CONSTRUCTION_ETAPE_PAR_ETAPE.md | 60 min |
 | Comprendre la structure | 01-arbre_widgets.md | 20 min |
 | Apprendre StreamBuilder | 02-explication_streambuilder.md | 15 min |
 | M'auto-évaluer | EXAMEN_STREAMBUILDER_20Q.md | 45 min |
