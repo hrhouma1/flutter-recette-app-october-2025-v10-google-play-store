@@ -1125,7 +1125,7 @@ graph TB
 
 ## Conclusion
 
-Votre application Flutter utilise une architecture moderne et bien structurée :
+Notre application Flutter utilise une architecture moderne et bien structurée :
 
 1. **Séparation des responsabilités** : UI, logique métier, et données sont bien séparées
 2. **Gestion d'état centralisée** : Un seul FavoriteProvider pour tous les écrans
@@ -1133,5 +1133,5 @@ Votre application Flutter utilise une architecture moderne et bien structurée :
 4. **Persistance des données** : Firebase Firestore assure la sauvegarde
 5. **Performance optimisée** : Consumer rebuild seulement les parties nécessaires
 
-Cette architecture est scalable et peut facilement accueillir de nouvelles fonctionnalités.
+
 
