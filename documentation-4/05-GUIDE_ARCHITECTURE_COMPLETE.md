@@ -263,20 +263,30 @@ stateDiagram-v2
     NonFavori --> Favori : toggleFavorite()
     Favori --> NonFavori : toggleFavorite()
     
-    NonFavori : _favoriteIds ne contient PAS l'ID
-    NonFavori : Icône coeur vide
-    NonFavori : Pas dans Firestore
-    
-    Favori : _favoriteIds contient l'ID
-    Favori : Icône coeur plein rouge
-    Favori : Document dans Firestore
+    state NonFavori {
+        [*] --> PasEnMemoire
+        PasEnMemoire --> IconeVide
+        IconeVide --> PasDansFirestore
+    }
     
     state Favori {
         [*] --> AjoutLocal
         AjoutLocal --> AjoutFirestore
         AjoutFirestore --> Notification
-        Notification --> [*]
+        Notification --> IconeRouge
     }
+    
+    note right of NonFavori
+        _favoriteIds ne contient PAS l'ID
+        Icône coeur vide
+        Pas dans Firestore
+    end note
+    
+    note right of Favori
+        _favoriteIds contient l'ID
+        Icône coeur plein rouge
+        Document dans Firestore
+    end note
 ```
 
 ### Code commenté : FavoriteProvider
