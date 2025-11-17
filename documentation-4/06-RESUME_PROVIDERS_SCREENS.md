@@ -37,9 +37,9 @@ graph LR
 - Ligne 17 : `ChangeNotifierProvider`
 
 **Où le Provider est utilisé ?**
-- `lib/Views/app_main_screen.dart` (ligne 232-260)
-- `lib/Views/favorite_screen.dart` (ligne 13)
-- `lib/Views/view_all_items.dart` (ligne 266-294)
+- `lib/Views/app_main_screen.dart` 
+- `lib/Views/favorite_screen.dart` 
+- `lib/Views/view_all_items.dart` 
 
 ---
 
@@ -623,6 +623,3 @@ graph LR
 - **Maintenabilité** : Code centralisé et réutilisable
 - **Scalabilité** : Facile d'ajouter de nouveaux Providers
 - **Testabilité** : Logique métier séparée de l'UI
-
-Votre projet suit les bonnes pratiques Flutter et utilise une architecture professionnelle et maintenable.
-
