@@ -1,3 +1,12 @@
+# 01 - AVANT DE COMMENCER 
+
+- https://github.com/hrhouma1/flutter-01-projet07-provider-demo-2
+- https://github.com/hrhouma1/flutter-01-projet07-provider-demo-1
+- Dcoumentation provider dans les dossiers documentaions : https://github.com/hrhouma1/flutter-recette-app-october-2025-v8
+- StreamBuilder et examen
+
+A new Flutter project.
+
 # flutter_rec_oct_2025_v3
 
 A new Flutter project.
